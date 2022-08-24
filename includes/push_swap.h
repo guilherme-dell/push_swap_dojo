@@ -23,7 +23,7 @@ void	  print_stack_elements(t_stack *stack);
 t_stack	*stack_new(int content);
 void	  stack_add_front(t_stack **stack, t_stack *new);
 t_stack	*stack_last_node(t_stack *stack);
-void	  stack_add_back(t_stack **stack, t_stack *new)
+void	  stack_add_back(t_stack **stack, t_stack *new);
 void	  clear_stack(t_stack **stack);
 
 #endif
