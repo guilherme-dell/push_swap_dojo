@@ -14,8 +14,8 @@
 
 int main(int argc, char **argv)
 {
-	//t_data *data;
+	t_data *data;
 
-	//data = malloc(sizeof(t_data));
-	//initialize(data, argc, argv);
+	data = malloc(sizeof(t_data));
+	initialize(data, argc, argv);
 }
