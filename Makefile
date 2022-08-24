@@ -31,6 +31,7 @@ INCLUDES = -I ./includes/
 
 SRCS 		= $(SRCS_PATH)/push_swap.c	\
 		$(SRCS_PATH)/initialize.c	\
+		$(SRCS_PATH)/utils.c		\
 		$(SRCS_PATH)/error.c
 
 all:		$(NAME)
