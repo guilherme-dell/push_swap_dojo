@@ -10,17 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	initialize(t_data *data, int argc, char **argv);
 void	init_data(t_data *data);
-void	check_arguments(t_data *data, int argc, char **argv);
+void	ft_isinteger(t_data *data, int argc, char **argv);
+int	find_last_leading_zero(char *number);
+t_bool	is_outside_integers_range(char *number);
 
 void	initialize(t_data *data, int argc, char **argv)
 {
 	init_data(data);
-	check_arguments(data, argc, argv);
-	//allocate_elements_on_stack_a
+	ft_isinteger(data, argc, argv);
 }
 
 void	init_data(t_data *data)
@@ -28,29 +29,62 @@ void	init_data(t_data *data)
 	data->stack_allocated = false;
 }
 
-void	check_arguments(t_data *data, int argc, char **argv)
+void	ft_isinteger(t_data *data, int argc, char **argv)
 {
 	int arg;
 	int i;
 
-	i = 0;
 	arg = 1;
-	data->stack_a = malloc(sizeof(t_stack **));
-	
 	while (arg < argc)
 	{
-		if(argv[arg][i])
+		i = 0;
+		if (argv[arg][0] == '\0')
+				error(data, "Null argument");
+		while (argv[arg][i])
 		{
-			while (argv[arg][i])
-			{
-				if (ft_isdigit(argv[arg][i++]) == false && argv[arg][0] != '-')
+			if (ft_isdigit(argv[arg][i++]) == false && argv[arg][0] != '-')
 				error(data, "Contains not integers as arguments");
+			if (ft_strlen(&argv[arg][find_last_leading_zero(argv[arg])]) > 9)
+			{
+				if (is_outside_integers_range(argv[arg]) == true)
+					error(data, "Integer over the int's range");
 			}
-			stack_add_back(data->stack_a, stack_new(ft_atoi(argv[arg])));
-			print_stack_elements(*data->stack_a);
 		}
 		arg++;
-		i = 0;
 	}
 }
 
+int	find_last_leading_zero(char *number)
+{
+	int i;
+
+	i = 0;
+	if (number[0] == '-')
+		i++;
+	while (number[i] == '0')
+		i++;
+	return (i);
+}
+
+t_bool is_outside_integers_range(char *number)
+{
+	int i;
+	
+	i = find_last_leading_zero(number);
+	if (ft_strlen(&number[i]) > 10)
+		return (true);
+	if (number[i++] <= '2')
+		if (number[i++] <= '1')
+			if (number[i++] <= '4')
+				if (number[i++] <= '7')
+					if (number[i++] <= '4')
+						if (number[i++] <= '8')
+							if (number[i++] <= '3')
+								if (number[i++] <= '6')
+									if (number[i++] <= '4')
+										if ((number[i] <= '7') \
+											|| (number[0] == '-') \
+											&& (number[i] == '8'))
+											return (false);
+	return (true);
+}
