@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   initialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/24 10:12:09 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/24 15:31:53 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	initialize(t_data *data, int argc, char **argv);
 void	init_data(t_data *data);
@@ -25,12 +25,11 @@ void	initialize(t_data *data, int argc, char **argv)
 
 void	init_data(t_data *data)
 {
-	//data->alloc = false;
+	data->stack_allocated = false;
 }
 
 void	check_arguments(t_data *data, int argc, char **argv)
 {
-	/*
 	int arg;
 	int i;
 
@@ -46,5 +45,5 @@ void	check_arguments(t_data *data, int argc, char **argv)
 		}
 		arg++;
 	}
-	*/
 }
+
