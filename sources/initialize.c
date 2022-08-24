@@ -42,6 +42,7 @@ void	check_arguments(t_data *data, int argc, char **argv)
 			if (ft_isdigit(argv[arg][i++]) == false)
 				error(data, "Contains not integers as arguments");
 			stack_add_front(stack_a, stack_new(ft_atoi(argv[arg])));
+			data->stack_allocated = true;
 		}
 		arg++;
 	}
