@@ -19,7 +19,8 @@ typedef struct s_stack
 
 typedef struct s_data
 {
-	t_bool	stack_allocated;
-	t_stack **stack_a;
-	t_stack **stack_b;
+	int		nbr_of_elements;
+	t_bool		stack_allocated;
+	t_stack		**stack_a;
+	t_stack		**stack_b;
 }	t_data;
