@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/25 21:55:44 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/25 23:14:06 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-
-void normalization(char **values, int nbr_of_elements)
+char  *normalization(char **values, int nbr_of_elements)
 {
 	int i;
 	int j;
+	char *normalized;
 	int index;
-
-	char **normalized_elements[nbr_of_elements];
-
 	
-
 	i = 1;
+	normalized = malloc((sizeof(char) * nbr_of_elements) + 1);
 	while (i <= nbr_of_elements)
 	{
 		j = 1;
@@ -36,6 +32,11 @@ void normalization(char **values, int nbr_of_elements)
 			}
 			j++;
 		}
+		normalized[i - 1] = index;
+		ft_printf("%d\n", normalized[i]);
 		i++;
 	}
+	normalized[i - 1] = '\0';
+	ft_putstr_fd(normalization, 1);
+	return (normalized);
 }
