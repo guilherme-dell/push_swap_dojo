@@ -25,7 +25,7 @@ void		stack_add_front(t_stack **stack, t_stack *new);
 t_stack		*stack_last_node(t_stack *stack);
 void		stack_add_back(t_stack **stack, t_stack *new);
 void		clear_stack(t_stack **stack);
-void		normalization(char **values, int nbr_of_elements);
+char 		*normalization(char **values, int nbr_of_elements);
 void		fill_stacks(t_data *data, char *normalized_elements);
 
 #endif
