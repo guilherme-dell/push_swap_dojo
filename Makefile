@@ -6,7 +6,7 @@
 #    By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 16:48:56 by acesar-l          #+#    #+#              #
-#    Updated: 2022/08/24 11:00:47 by gnuncio-         ###   ########.fr        #
+#    Updated: 2022/08/25 18:36:02 by gnuncio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,7 @@ REMOVE 		= rm -f
 
 INCLUDES = -I ./includes/
 
-SRCS 		= $(SRCS_PATH)/push_swap.c	\
-		$(SRCS_PATH)/initialize.c	\
-		$(SRCS_PATH)/utils.c		\
-		$(SRCS_PATH)/error.c
+SRCS 		= $(SRCS_PATH)/*.c
 
 all:		$(NAME)
 

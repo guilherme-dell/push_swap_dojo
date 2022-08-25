@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/25 20:41:55 by gnuncio-         ###   ########.fr       */
+/*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
+/*   Updated: 2022/08/25 21:15:37 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void normalization(int numbers, char **values, int total)
 {
-	t_data *data;
+	int i;
+	int j;
 
-	data = malloc(sizeof(t_data));
-	//initialize(data, argc, argv);
-	normalization(argc, argv, 6);
+	i = 1;
+	int indice;
+	while (i <= total)
+	{
+		j = 1;
+		indice = 0;
+		while (j <= total)
+		{
+			if(ft_atoi(values[i]) > ft_atoi(values[j])){
+				indice++;
+
+				ft_printf("%s | INDICE = %d\n", values[i], indice);
+			}
+			j++;
+		}
+		i++;
+	}
+	ft_printf("TOTAL:%d\n", i);
 }
