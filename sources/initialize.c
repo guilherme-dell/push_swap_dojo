@@ -13,14 +13,14 @@
 #include "push_swap.h"
 
 void	initialize(t_data *data, int argc, char **argv);
-void	init_data(t_data *data, int argc)
+void	init_data(t_data *data, int argc);
 void	ft_isinteger(t_data *data, int argc, char **argv);
 int	find_last_leading_zero(char *number);
 t_bool	is_outside_integers_range(char *number);
 
 void	initialize(t_data *data, int argc, char **argv)
 {
-	init_data(data);
+	init_data(data, argc);
 	ft_isinteger(data, argc, argv);
 }
 
