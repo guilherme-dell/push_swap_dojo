@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   initialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/24 15:31:53 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:37:08 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	initialize(t_data *data, int argc, char **argv);
-void	init_data(t_data *data);
+void	init_data(t_data *data, int argc)
 void	ft_isinteger(t_data *data, int argc, char **argv);
 int	find_last_leading_zero(char *number);
 t_bool	is_outside_integers_range(char *number);
@@ -24,8 +24,9 @@ void	initialize(t_data *data, int argc, char **argv)
 	ft_isinteger(data, argc, argv);
 }
 
-void	init_data(t_data *data)
+void	init_data(t_data *data, int argc)
 {
+	data->nbr_of_elements = argc - 1;
 	data->stack_allocated = false;
 }
 
@@ -69,7 +70,7 @@ int	find_last_leading_zero(char *number)
 t_bool is_outside_integers_range(char *number)
 {
 	int i;
-	
+
 	i = find_last_leading_zero(number);
 	if (ft_strlen(&number[i]) > 10)
 		return (true);
