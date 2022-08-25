@@ -14,9 +14,11 @@
 
 int main(int argc, char **argv)
 {
-	t_data *data;
+	t_data	*data;
+	char	*normalized_elements;
 
 	data = malloc(sizeof(t_data));
 	initialize(data, argc, argv);
-	normalization(argv, data->nbr_of_elements);
+	normalized_elements = normalization(argv, data->nbr_of_elements);
+	fill_stacks(data, normalized_elements);
 }
