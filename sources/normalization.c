@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/25 23:14:06 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/25 23:53:29 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,14 @@ char  *normalization(char **values, int nbr_of_elements)
 		index = 0;
 		while (j <= nbr_of_elements)
 		{
-			if(ft_atoi(values[i]) > ft_atoi(values[j])){
+			if(ft_atoi(values[i]) > ft_atoi(values[j]))
+			{
 				index++;
 			}
 			j++;
 		}
 		normalized[i - 1] = index;
-		ft_printf("%d\n", normalized[i]);
+		ft_printf("%d | %d | %d\n", normalized[i], i, index);
 		i++;
 	}
 	normalized[i - 1] = '\0';
