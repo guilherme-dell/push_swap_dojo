@@ -17,7 +17,7 @@
 # include "defines.h"
 
 void		initialize(t_data *data, int argc, char **argv);
-void		init_data(t_data *data, int argc)
+void		init_data(t_data *data, int argc);
 void		error(t_data *data, char *message);
 void		print_stack_elements(t_stack *stack);
 t_stack		*stack_new(int content);
