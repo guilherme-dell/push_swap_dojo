@@ -6,7 +6,7 @@
 #    By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 16:48:56 by acesar-l          #+#    #+#              #
-#    Updated: 2022/08/25 18:36:02 by gnuncio-         ###   ########.fr        #
+#    Updated: 2022/08/26 15:17:55 by gnuncio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ LIBFT		= ./libraries/Libft/libft.a
 
 SRCS_PATH	= ./sources
 
-CC 		= clang
+CC 		= gcc -g3
 
 FLAGS 		=
 
@@ -51,5 +51,11 @@ fclean:
 		@echo "$(GREY)$(NAME): $(NAME) was deleted$(RESET)"
 
 re:		clean $(NAME)
+
+run:
+	@./$(NAME) 10 3 20 50 7 12
+
+val:
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --quiet --tool=memcheck --keep-debuginfo=yes ./$(NAME) 10 3 20 50 7 12
 
 .PHONY:		all clean fclean re
