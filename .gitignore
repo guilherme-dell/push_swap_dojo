@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 #my files
-#.gitignore
+.gitignore
 learning/
 README.md
 teste/
