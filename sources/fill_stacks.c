@@ -17,17 +17,17 @@ void		free_vector(t_data *data, int **normalized_elements);
 
 void		fill_stacks(t_data *data, int *normalized_elements)
 {
-    int i;
-
-    i = 0;
-    data->stack_a = malloc(sizeof(t_stack **));
-    data->stack_b = malloc(sizeof(t_stack **));
-    *data->stack_a = stack_new(normalized_elements[i]);
+	int i;
+	
+	i = 0;
+	data->stack_a = malloc(sizeof(t_stack **));
+	data->stack_b = malloc(sizeof(t_stack **));
+	*data->stack_a = stack_new(normalized_elements[i]);
 	i++;
-    while (i < data->nbr_of_elements)
-    {
-        stack_add_back(data->stack_a, stack_new(normalized_elements[i]));
-        i++;
-    }
+	while (i < data->nbr_of_elements)
+	{
+		stack_add_back(data->stack_a, stack_new(normalized_elements[i]));
+		i++;
+	}
 	free(normalized_elements);
 }
