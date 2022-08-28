@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_array.c                                       :+:      :+:    :+:   */
+/*   fill_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 22:43:33 by coder             #+#    #+#             */
-/*   Updated: 2022/08/27 21:50:10 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/28 03:14:01 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void		fill_stacks(t_data *data, int *normalized_elements)
 {
     int i;
 
-    i = 1;
+    i = 0;
     data->stack_a = malloc(sizeof(t_stack **));
     data->stack_b = malloc(sizeof(t_stack **));
     *data->stack_a = stack_new(normalized_elements[i]);
 	i++;
-    while (i <= data->nbr_of_elements)
+    while (i < data->nbr_of_elements)
     {
         stack_add_back(data->stack_a, stack_new(normalized_elements[i]));
         i++;
