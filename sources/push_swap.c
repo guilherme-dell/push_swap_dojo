@@ -6,7 +6,7 @@
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/28 02:49:00 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/28 03:15:12 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ int main(int argc, char **argv)
 	print_stack_elements(*data->stack_a);
 	clear_stack(data->stack_a);
 	free(data->stack_b);
+	free(data);
 }
