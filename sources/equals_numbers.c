@@ -16,7 +16,6 @@ void	equals_numbers(t_data *data, char **values, int nbr_of_elements)
 {
 	int	i;
 	int	j;
-	int	*normalized;
 
 	i = 1;
 	while (i <= nbr_of_elements)
