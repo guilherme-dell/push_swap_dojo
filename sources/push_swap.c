@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/28 00:24:17 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/28 02:49:00 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
 	data = malloc(sizeof(t_data));
 	initialize(data, argc, argv);
-	equals_numbers(argv, data->nbr_of_elements);
+	equals_numbers(data, argv, data->nbr_of_elements);
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	print_vetor(normalized_elements, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
