@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/26 15:17:18 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/28 03:14:33 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	print_vetor(int *vetor, int nbr_of_elements)
 {
 	int	i;
 
-	i = 1;
-	while (i <= nbr_of_elements)
+	i = 0;
+	while (i < nbr_of_elements)
 	{
 		ft_printf("%d\n", vetor[i]);
 		i++;
@@ -32,7 +32,8 @@ int	*normalization(char **values, int nbr_of_elements)
 	int	index;
 
 	i = 1;
-	normalized = malloc((sizeof(int) * nbr_of_elements));
+	ft_printf("Number of elements - %d\n", nbr_of_elements);
+	normalized = malloc((sizeof(int) * (nbr_of_elements)));
 	while (i <= nbr_of_elements)
 	{
 		j = 1;
@@ -43,7 +44,7 @@ int	*normalization(char **values, int nbr_of_elements)
 				index++;
 			j++;
 		}
-		normalized[i] = index;
+		normalized[i - 1] = index;
 		i++;
 	}
 	return (normalized);
