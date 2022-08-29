@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/29 09:35:36 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/29 10:10:25 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ void	ft_isinteger(t_data *data, int argc, char **argv)
 		while (argv[arg][i])
 		{
 			if (ft_isdigit(argv[arg][i]) == false)
-				if (i != 0)
-					error(data, "Contains not integers as arguments");
-				else if (i == 0 && argv[arg][i] != '-')
+				if (i != 0 || i == 0 && argv[arg][i] != '-')
 					error(data, "Contains not integers as arguments");
 			if (ft_strlen(&argv[arg][find_last_leading_zero(argv[arg])]) > 9)
 				if (is_outside_integers_range(argv[arg]) == true)
