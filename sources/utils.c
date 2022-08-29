@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/24 16:43:40 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/29 09:23:28 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack	*stack_last_node(t_stack *stack);
 void	stack_add_back(t_stack **stack, t_stack *new);
 void	clear_stack(t_stack **stack);
 
-void print_stack_elements(t_stack *stack)
+void	print_stack_elements(t_stack *stack)
 {
 	int	length;
 

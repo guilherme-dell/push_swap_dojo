@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/29 00:29:15 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/29 09:22:57 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	initialize(t_data *data, int argc, char **argv);
 void	init_data(t_data *data, int argc);
 void	ft_isinteger(t_data *data, int argc, char **argv);
-int	find_last_leading_zero(char *number);
+int		find_last_leading_zero(char *number);
 t_bool	is_outside_integers_range(char *number);
 
 void	initialize(t_data *data, int argc, char **argv)
@@ -32,15 +32,15 @@ void	init_data(t_data *data, int argc)
 
 void	ft_isinteger(t_data *data, int argc, char **argv)
 {
-	int arg;
-	int i;
+	int	arg;
+	int	i;
 
 	arg = 1;
 	while (arg < argc)
 	{
 		i = 0;
 		if (argv[arg][0] == '\0')
-				error(data, "Null argument");
+			error(data, "Null argument");
 		while (argv[arg][i])
 		{
 			if (ft_isdigit(argv[arg][i]) == false)
@@ -63,7 +63,7 @@ void	ft_isinteger(t_data *data, int argc, char **argv)
 
 int	find_last_leading_zero(char *number)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (number[0] == '-')
@@ -73,9 +73,9 @@ int	find_last_leading_zero(char *number)
 	return (i);
 }
 
-t_bool is_outside_integers_range(char *number)
+t_bool	is_outside_integers_range(char *number)
 {
-	int i;
+	int	i;
 
 	i = find_last_leading_zero(number);
 	if (ft_strlen(&number[i]) > 10)
