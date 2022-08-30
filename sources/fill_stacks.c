@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 22:43:33 by coder             #+#    #+#             */
-/*   Updated: 2022/08/29 09:24:03 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:34:47 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	fill_stacks(t_data *data, int *normalized_elements)
 		stack_add_back(data->stack_a, stack_new(normalized_elements[i]));
 		i++;
 	}
+	*data->stack_b = NULL;
 	free(normalized_elements);
 }

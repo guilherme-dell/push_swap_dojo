@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 09:32:47 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/29 09:33:31 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:35:50 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ void	clear_stack(t_stack **stack)
 	t_stack	*ptr_i;
 	t_stack	*next;
 
-	if (!*stack)
+	if (*stack == NULL)
+	{
+		free(stack);
 		return ;
+	}
 	ptr_i = *stack;
 	while (ptr_i)
 	{

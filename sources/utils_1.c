@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/30 19:13:31 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:42:06 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,19 @@ void	print_stack_elements(t_stack *stack)
 	int	length;
 
 	length = 0;
-	ft_printf("STACK_A\t|| STACK_B \n");
-	ft_printf("|-------||--------|\n");
+	if (stack == NULL)
+	{
+		ft_printf(" || \n");
+		return ;
+	}
+	ft_printf(" || ");
 	while (stack)
 	{
-		ft_printf("   %d \t||   30\n", stack->number);
+		ft_printf("%d | ", stack->number);
 		length++;
 		stack = stack->next;
 	}
+	ft_printf("\n");
 }
 
 t_stack	*stack_new(int number)

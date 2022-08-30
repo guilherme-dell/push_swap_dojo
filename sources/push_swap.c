@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/30 19:04:15 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:42:33 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ int	main(int argc, char **argv)
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	//print_vetor(normalized_elements, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
+	ft_printf("\nSTACK A");
 	print_stack_elements(*data->stack_a);
+	ft_printf("\nSTACK B");
+	print_stack_elements(*data->stack_b);
+	ft_printf("\n");
 	clear_stack(data->stack_a);
-	free(data->stack_b);
+	clear_stack(data->stack_b);
 	free(data);
 }
