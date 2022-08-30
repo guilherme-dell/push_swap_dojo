@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/29 09:20:37 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:14:09 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	*normalization(char **values, int nbr_of_elements)
 	int	index;
 
 	i = 1;
-	ft_printf("Number of elements - %d\n", nbr_of_elements);
 	normalized = malloc((sizeof(int) * (nbr_of_elements)));
 	while (i <= nbr_of_elements)
 	{

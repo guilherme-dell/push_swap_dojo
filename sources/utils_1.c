@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/29 09:33:42 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/30 19:13:31 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	print_stack_elements(t_stack *stack)
 	int	length;
 
 	length = 0;
-	ft_printf("Content | ");
+	ft_printf("STACK_A\t|| STACK_B \n");
+	ft_printf("|-------||--------|\n");
 	while (stack)
 	{
-		ft_printf("%d | ", stack->number);
+		ft_printf("   %d \t||   30\n", stack->number);
 		length++;
 		stack = stack->next;
 	}
-	ft_printf("\nLength  | %d \n\n", length);
 }
 
 t_stack	*stack_new(int number)
