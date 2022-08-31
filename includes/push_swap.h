@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/28 02:48:30 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:15:28 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int			*normalization(char **values, int nbr_of_elements);
 void		fill_stacks(t_data *data, int *normalized_elements);
 void		print_vetor(int *vetor, int nbr_of_elements);
 void		equals_numbers(t_data *data, char **values, int nbr_of_elements);
+void		swap(t_stack *stack);
 
 #endif
