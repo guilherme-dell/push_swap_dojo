@@ -58,14 +58,18 @@ void	opt_rb(t_stack **stack)
 	new_first_node = (*stack)->next;
 	free(*stack);
 	*stack = new_first_node;
-	ft_printf("ra\n");
+	ft_printf("rb\n");
 }
 
 void	opt_rra(t_stack **stack)
 {
 	t_stack *last_node;
+	t_stack *new_first_node;
 
 	last_node = stack_last_node(*stack);
-	ft_printf("%d - last | %d previous_last \n", (stack_last_node(*stack))->number, ((stack_last_node(*stack))->previous)->number);
+	new_first_node = stack_new(last_node->number);
+	stack_add_front(stack, new_first_node);
+	last_node->previous->next = NULL;
+	free(last_node);
 	ft_printf("rra\n");
 }
