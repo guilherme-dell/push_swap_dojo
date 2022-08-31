@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 20:31:17 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/31 23:57:18 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,8 @@ void		opt_ss(t_data *data);
 void		opt_ra(t_stack **stack);
 void		opt_rra(t_stack **stack);
 void		swap_values(int *a, int *b);
+void		stack_remove_first_node(t_stack **stack);
+void		opt_pa(t_stack **stack_a, t_stack **stack_b);
+void		opt_pb(t_stack **stack_b, t_stack **stack_a);
 
 #endif
