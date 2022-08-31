@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:56:49 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/31 20:15:13 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/31 21:01:13 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,32 @@ void	opt_ra(t_stack **stack)
 	new_last_node = stack_new((*stack)->number);
 	last_node = stack_last_node(*stack);
 	last_node->next = new_last_node;
-	new_last_node->next = NULL;
 	new_first_node = (*stack)->next;
 	free(*stack);
 	*stack = new_first_node;
 	ft_printf("ra\n");
+}
+
+void	opt_rb(t_stack **stack)
+{
+	t_stack *new_last_node;
+	t_stack *last_node;
+	t_stack *new_first_node;
+
+	new_last_node = stack_new((*stack)->number);
+	last_node = stack_last_node(*stack);
+	last_node->next = new_last_node;
+	new_first_node = (*stack)->next;
+	free(*stack);
+	*stack = new_first_node;
+	ft_printf("ra\n");
+}
+
+void	opt_rra(t_stack **stack)
+{
+	t_stack *last_node;
+
+	last_node = stack_last_node(*stack);
+	ft_printf("%d - last | %d previous_last \n", (stack_last_node(*stack))->number, ((stack_last_node(*stack))->previous)->number);
+	ft_printf("rra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 20:03:53 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/31 20:30:09 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ int	main(int argc, char **argv)
 	ft_printf("\nSTACK A");
 	print_stack_elements(*data->stack_a);
 	ft_printf("\n");
+	opt_ra(data->stack_a);
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);
+	ft_printf("\n");
+	opt_rra(data->stack_a);
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);ft_printf("\n");
+	opt_rra(data->stack_a);
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);

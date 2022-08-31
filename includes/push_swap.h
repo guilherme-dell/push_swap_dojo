@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 19:55:43 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/31 20:31:17 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void		opt_sa(t_stack *stack);
 void		opt_sb(t_stack *stack);
 void		opt_ss(t_data *data);
 void		opt_ra(t_stack **stack);
+void		opt_rra(t_stack **stack);
 void		swap_values(int *a, int *b);
 
 #endif
