@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   operations_1.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:56:49 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/31 18:06:48 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/31 20:15:13 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,13 @@
 
 void	opt_sa(t_stack *stack)
 {
-	t_stack	aux_temp;
-
-	aux_temp.number = stack->number;
-	stack->number = stack->next->number;
-	stack->next->number = aux_temp.number;
+	swap_values(&stack->number, &stack->next->number);
 	ft_printf("sa\n");
 }
 
 void	opt_sb(t_stack *stack)
 {
-	t_stack	aux_temp;
-
-	aux_temp.number = stack->number;
-	stack->number = stack->next->number;
-	stack->next->number = aux_temp.number;
+	swap_values(&stack->number, &stack->next->number);
 	ft_printf("sb\n");
 }
 
@@ -39,15 +31,18 @@ void	opt_ss(t_data *data)
 	ft_printf("ss\n");
 }
 
-void	opt_ra(t_stack *stack)
+void	opt_ra(t_stack **stack)
 {
-	t_stack aux_temp;
-	t_stack *aux_temp2;
+	t_stack *new_last_node;
+	t_stack *last_node;
+	t_stack *new_first_node;
 
-	aux_temp2 = stack_last_node(stack);
-
-	aux_temp.number = stack->number;
-	stack->number =aux_temp2->number;
-	aux_temp2->number = aux_temp.number;
+	new_last_node = stack_new((*stack)->number);
+	last_node = stack_last_node(*stack);
+	last_node->next = new_last_node;
+	new_last_node->next = NULL;
+	new_first_node = (*stack)->next;
+	free(*stack);
+	*stack = new_first_node;
 	ft_printf("ra\n");
 }

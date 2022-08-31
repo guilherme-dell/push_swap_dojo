@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 18:05:07 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/31 19:55:43 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void		equals_numbers(t_data *data, char **values, int nbr_of_elements);
 void		opt_sa(t_stack *stack);
 void		opt_sb(t_stack *stack);
 void		opt_ss(t_data *data);
-void		opt_ra(t_stack *stack);
+void		opt_ra(t_stack **stack);
+void		swap_values(int *a, int *b);
 
 #endif

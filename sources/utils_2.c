@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 09:32:47 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/30 19:35:50 by coder            ###   ########.fr       */
+/*   Updated: 2022/08/31 19:47:36 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,11 @@ void	clear_stack(t_stack **stack)
 	}
 	*stack = NULL;
 	free(stack);
+}
+
+void swap_values(int *a, int *b)
+{
+	*a ^= *b;
+	*b ^= *a;
+	*a ^= *b;
 }
