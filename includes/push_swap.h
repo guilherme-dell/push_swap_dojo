@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 17:15:28 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/31 18:05:07 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ int			*normalization(char **values, int nbr_of_elements);
 void		fill_stacks(t_data *data, int *normalized_elements);
 void		print_vetor(int *vetor, int nbr_of_elements);
 void		equals_numbers(t_data *data, char **values, int nbr_of_elements);
-void		swap(t_stack *stack);
+void		opt_sa(t_stack *stack);
+void		opt_sb(t_stack *stack);
+void		opt_ss(t_data *data);
+void		opt_ra(t_stack *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 17:36:32 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/08/31 18:26:51 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ int	main(int argc, char **argv)
 	ft_printf("\nSTACK B");
 	print_stack_elements(*data->stack_b);
 	ft_printf("\n");
-	swap(*data->stack_a);
+	opt_sa(*data->stack_a);
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);
+	ft_printf("\n");
+	opt_ra(*data->stack_a);
 	ft_printf("\nSTACK A");
 	print_stack_elements(*data->stack_a);
 	ft_printf("\n");
