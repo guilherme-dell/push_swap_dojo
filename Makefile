@@ -23,7 +23,7 @@ SRCS_PATH	= ./sources
 
 CC 		= gcc -g3
 
-FLAGS 		=
+FLAGS 		= -Wall -Werror Wextra
 
 REMOVE 		= rm -f
 
