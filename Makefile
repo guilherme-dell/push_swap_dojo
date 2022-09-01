@@ -56,6 +56,6 @@ run:
 	@./$(NAME) 10 3 20 50 7 12
 
 val:
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --quiet --tool=memcheck --keep-debuginfo=yes ./$(NAME) 10 7 6 9 5
+	@valgrind --leak-check=full --show-leak-kinds=all --quiet --tool=memcheck --keep-debuginfo=yes ./$(NAME) 10 7 6 9 5
 
 .PHONY:		all clean fclean re
