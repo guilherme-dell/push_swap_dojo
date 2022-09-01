@@ -6,13 +6,13 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 21:51:09 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/01 23:40:45 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void printthe_stacks(t_data *data);
+static void	printthe_stacks(t_data *data);
 
 int	main(int argc, char **argv)
 {
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 	free(data);
 }
 
-static void printthe_stacks(t_data *data)
+static void	printthe_stacks(t_data *data)
 {
 	ft_printf("\nSTACK A");
 	print_stack_elements(*data->stack_a);

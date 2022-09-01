@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_2.c                                          :+:      :+:    :+:   */
+/*   stack_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 09:32:47 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/01 20:58:11 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/01 23:39:52 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	clear_stack(t_stack **stack);
+void	stack_remove_first_node(t_stack **stack);
+int		stack_size(t_stack **stack);
 
 void	clear_stack(t_stack **stack)
 {
@@ -33,16 +37,9 @@ void	clear_stack(t_stack **stack)
 	free(stack);
 }
 
-void swap_values(int *a, int *b)
-{
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
-}
-
 void	stack_remove_first_node(t_stack **stack)
 {
-	t_stack *new_first_node;
+	t_stack	*new_first_node;
 
 	if ((*stack)->next == NULL)
 	{
@@ -55,10 +52,10 @@ void	stack_remove_first_node(t_stack **stack)
 	*stack = new_first_node;
 }
 
-int			stack_size(t_stack **stack)
+int	stack_size(t_stack **stack)
 {
 	t_stack	*ptr_i;
-	int length;
+	int		length;
 
 	length = 0;
 	ptr_i = *stack;

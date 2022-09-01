@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_1.c                                          :+:      :+:    :+:   */
+/*   stack_utils_1.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/31 22:57:05 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/01 23:34:48 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack_elements(t_stack *stack);
 t_stack	*stack_new(int number);
 void	stack_add_front(t_stack **stack, t_stack *new);
-t_stack	*stack_last_node(t_stack *stack);
 void	stack_add_back(t_stack **stack, t_stack *new);
+t_stack	*stack_last_node(t_stack *stack);
+void	print_stack_elements(t_stack *stack);
 
 void	print_stack_elements(t_stack *stack)
 {
