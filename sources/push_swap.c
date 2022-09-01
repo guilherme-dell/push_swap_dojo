@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 00:11:29 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/01 21:51:09 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,17 @@ int	main(int argc, char **argv)
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
 	printthe_stacks(data);
-	opt_pb(data->stack_a, data->stack_b);
+	run_push(data, PB);
 	printthe_stacks(data);
-	opt_sa(*data->stack_a);
+	run_swap(data, SS);
 	printthe_stacks(data);
-	opt_rra(data->stack_a);
+	run_reverse_rotate(data, RRA);
 	printthe_stacks(data);
-	opt_pa(data->stack_b, data->stack_a);
+	run_push(data, PB);
 	printthe_stacks(data);
-	opt_ra(data->stack_a);
+	run_rotate(data, RA);
+	printthe_stacks(data);
+	run_push(data, PA);
 	printthe_stacks(data);
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
