@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 16:48:56 by acesar-l          #+#    #+#              #
-#    Updated: 2022/09/01 00:17:59 by gnuncio-         ###   ########.fr        #
+#    Updated: 2022/09/01 23:45:15 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ LIBFT		= ./libraries/Libft/libft.a
 
 SRCS_PATH	= ./sources
 
-CC 		= gcc -g3
+CC 			= gcc -g3
 
 FLAGS 		= -Wall -Werror -Wextra
 
@@ -34,28 +34,28 @@ SRCS 		= $(SRCS_PATH)/*.c
 all:		$(NAME)
 
 $(NAME): 	$(LIBFT)
-		@$(CC) $(INCLUDES) -o $(NAME) $(SRCS) $(FLAGS) $(LIBFT)
-		@echo "$(GREY)$(NAME): $(GREEN)$(NAME) was created$(RESET)"
+			@$(CC) $(INCLUDES) -o $(NAME) $(SRCS) $(FLAGS) $(LIBFT)
+			@echo "$(GREY)$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 
 ${LIBFT}:
-		@make bonus -C $(LIBFT_PATH)
+			@make bonus -C $(LIBFT_PATH)
 
 clean:
-		@${REMOVE} ${NAME}
-		@echo "$(GREY)$(NAME): $(NAME) was deleted$(RESET)"
+			@${REMOVE} ${NAME}
+			@echo "$(GREY)$(NAME): $(NAME) was deleted$(RESET)"
 
 
 fclean:
-		make fclean -C $(LIBFT_PATH)
-		@$(REMOVE) $(NAME)
-		@echo "$(GREY)$(NAME): $(NAME) was deleted$(RESET)"
+			make fclean -C $(LIBFT_PATH)
+			@$(REMOVE) $(NAME)
+			@echo "$(GREY)$(NAME): $(NAME) was deleted$(RESET)"
 
-re:		clean $(NAME)
+re:			clean $(NAME)
 
 run:
-	@./$(NAME) 10 3 20 50 7 12
+			@./$(NAME) 10 3 20 50 7 12
 
 val:
-	@valgrind --leak-check=full --show-leak-kinds=all --quiet --tool=memcheck --keep-debuginfo=yes ./$(NAME) 10 7 6 9 5
+			@valgrind --leak-check=full --show-leak-kinds=all --quiet --tool=memcheck --keep-debuginfo=yes ./$(NAME) 10 7 6 9 5
 
 .PHONY:		all clean fclean re
