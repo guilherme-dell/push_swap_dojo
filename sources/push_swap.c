@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/02 02:36:46 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/02 02:40:25 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,4 @@ int	main(int argc, char **argv)
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
-}
-
-static void	printthe_stacks(t_data *data)
-{
-	ft_printf("\nSTACK A");
-	print_stack_elements(*data->stack_a);
-	ft_printf("\nSTACK B");
-	print_stack_elements(*data->stack_b);
-	ft_printf("\n");
 }
