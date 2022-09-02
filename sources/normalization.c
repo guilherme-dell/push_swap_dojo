@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/30 19:14:09 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/02 01:36:40 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	print_vetor(int *vetor, int nbr_of_elements)
-{
-	int	i;
-
-	i = 0;
-	while (i < nbr_of_elements)
-	{
-		ft_printf("%d\n", vetor[i]);
-		i++;
-	}
-}
 
 int	*normalization(char **values, int nbr_of_elements)
 {

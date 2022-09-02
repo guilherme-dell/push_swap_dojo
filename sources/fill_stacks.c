@@ -6,14 +6,13 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 22:43:33 by coder             #+#    #+#             */
-/*   Updated: 2022/08/30 19:34:47 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/02 01:36:32 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	fill_stacks(t_data *data, int *normalized_elements);
-void	free_vector(t_data *data, int **normalized_elements);
 
 void	fill_stacks(t_data *data, int *normalized_elements)
 {

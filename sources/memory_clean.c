@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   memory_clean.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 18:54:03 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/08/29 10:16:24 by gnuncio-         ###   ########.fr       */
+/*   Created: 2022/09/02 01:34:58 by coder             #+#    #+#             */
+/*   Updated: 2022/09/02 01:40:26 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	error(t_data *data, char *message);
+void	memory_clean(t_data *data);
+
+void	memory_clean(t_data *data)
+{
+	clear_stack(data->stack_a);
+	clear_stack(data->stack_b);
+	free(data);
+}
 
 void	error(t_data *data, char *message)
 {

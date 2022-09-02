@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 23:34:48 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/02 01:36:26 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,6 @@ t_stack	*stack_new(int number);
 void	stack_add_front(t_stack **stack, t_stack *new);
 void	stack_add_back(t_stack **stack, t_stack *new);
 t_stack	*stack_last_node(t_stack *stack);
-void	print_stack_elements(t_stack *stack);
-
-void	print_stack_elements(t_stack *stack)
-{
-	int	length;
-
-	length = 0;
-	if (stack == NULL)
-	{
-		ft_printf(" || \n");
-		return ;
-	}
-	ft_printf(" || ");
-	while (stack)
-	{
-		ft_printf("%d | ", stack->number);
-		length++;
-		stack = stack->next;
-	}
-	ft_printf("\n");
-}
 
 t_stack	*stack_new(int number)
 {
