@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 23:40:45 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/02 02:18:19 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,18 @@ int	main(int argc, char **argv)
 {
 	t_data	*data;
 	int		*normalized_elements;
+	t_bool	status_sorting;
 
 	data = malloc(sizeof(t_data));
 	initialize(data, argc, argv);
 	equals_numbers(data, argv, data->nbr_of_elements);
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
-	printthe_stacks(data);
-	run_push(data, PB);
-	printthe_stacks(data);
-	run_swap(data, SS);
-	printthe_stacks(data);
-	run_reverse_rotate(data, RRA);
-	printthe_stacks(data);
-	run_push(data, PB);
-	printthe_stacks(data);
-	run_rotate(data, RA);
-	printthe_stacks(data);
-	run_push(data, PA);
-	printthe_stacks(data);
+	status_sorting  = sorting(data->stack_a);
+	if (status_sorting == 1)
+		ft_printf("TA ORDENADO ESSE KRL\n");
+	else
+		ft_printf("NÃO TA ORDENADO\n");
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
