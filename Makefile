@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 16:48:56 by acesar-l          #+#    #+#              #
-#    Updated: 2022/09/01 23:45:15 by coder            ###   ########.fr        #
+#    Updated: 2022/09/02 02:19:26 by gnuncio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS_PATH	= ./sources
 
 CC 			= gcc -g3
 
-FLAGS 		= -Wall -Werror -Wextra
+FLAGS 		=
 
 REMOVE 		= rm -f
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/02 01:48:02 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/02 02:35:39 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ void		operation_reverse_rotate(t_stack **stack);
 
 //utils.c
 void		swap_values(int *a, int *b);
+
+//sorting.c
+t_bool	sorting(t_stack **stack);
 
 #endif
