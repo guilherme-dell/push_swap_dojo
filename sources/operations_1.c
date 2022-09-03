@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_1.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:56:49 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/01 23:41:20 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/03 00:11:15 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	operation_push(t_stack **stack_src, t_stack **stack_dest)
 		return ;
 	stack_dest_first_node = stack_new((*stack_src)->number);
 	stack_add_front(stack_dest, stack_dest_first_node);
-	stack_remove_first_node(stack_dest);
+	stack_remove_first_node(stack_src);
 }
 
 void	operation_rotate(t_stack **stack)

@@ -6,14 +6,15 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:26:11 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/02 22:40:40 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/03 01:09:01 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+static	void	printthe_stacks(t_data *data);
 
 
-void radix(t_stack **stack_a, t_stack **stack_b)
+void radix(t_stack **stack_a, t_stack **stack_b, t_data *data)
 {
 	t_stack	*lista_a;
 	t_stack	*lista_b;
@@ -22,21 +23,36 @@ void radix(t_stack **stack_a, t_stack **stack_b)
 	lista_b	= *stack_b;
 
 	int shift;
-	shift = 1;
+	int count;
 
-	while (sorting(stack_a) != false)
+	shift = 0;
+
+	while (!sorting(stack_a))
 	{
-		while ((lista_a->number >> shift) & 1)
+		count = 0;
+		while (count < data->nbr_of_elements)
 		{
-			if((lista_a->number >> shift) & 1 == 1)
-				operation_push(stack_a, stack_b);
+			if ((lista_a->number >> shift) & 1)
+				run_rotate(data, RA);
 			else
-				operation_rotate(stack_a);
+				run_push(data, PB);
+			count++;
+
 		}
-		while (lista_b->next)
-			operation_push(stack_b, stack_a);
+		while (*stack_b){
+			run_push(data, PA);
+		}
+		printthe_stacks(data);
 		shift++;
-
 	}
+}
 
+
+static void	printthe_stacks(t_data *data)
+{
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);
+	ft_printf("\nSTACK B");
+	print_stack_elements(*data->stack_b);
+	ft_printf("\n");
 }

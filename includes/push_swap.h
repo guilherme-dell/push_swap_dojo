@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/02 22:38:09 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/03 01:13:24 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,10 @@ void		swap_values(int *a, int *b);
 
 //sorting.c
 t_bool	sorting(t_stack **stack);
-void	radix(t_stack **stack_a, t_stack **stack_b);
+void radix(t_stack **stack_a, t_stack **stack_b, t_data *data);
+
+//temp_funcs
+static	void	printthe_stacks(t_data *data);
+void	print_stack_elements(t_stack *stack);
 
 #endif
