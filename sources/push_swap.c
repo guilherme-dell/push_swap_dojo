@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/02 02:40:25 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/02 22:41:18 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,8 @@ int	main(int argc, char **argv)
 	equals_numbers(data, argv, data->nbr_of_elements);
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
-	status_sorting  = sorting(data->stack_a);
-	if (status_sorting == 1)
-		ft_printf("TA ORDENADO ESSE KRL\n");
-	else
-		ft_printf("NÃO TA ORDENADO\n");
+	radix(data->stack_a, data->stack_b);
+	
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
