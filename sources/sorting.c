@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 01:34:48 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/03 01:11:58 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:21:34 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ t_bool	sorting(t_stack **stack)
 	iterator = *stack;
 	while(iterator->next)
 	{
-		if(iterator->number > iterator->next->number){
-			ft_printf("%d > %d\n",iterator->number, iterator->next->number);
+		if(iterator->number > iterator->next->number)
 			return (false);
-		}
 		iterator = iterator->next;
 	}
 	return (true);
