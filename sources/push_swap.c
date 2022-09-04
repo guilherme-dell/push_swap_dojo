@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/03 16:23:17 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:45:36 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
 	radix(data->stack_a, data->stack_b, data);
-	//printthe_stacks(data);
+	printthe_stacks(data);
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
