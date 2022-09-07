@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/03 01:13:24 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/06 08:43:55 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@
 # include "defines.h"
 
 //sorting
-void		sort_three(t_data *data);
+void		sort_three(t_data *data, t_stack **a);
+void		sort_five(t_data *data, t_stack **a);
+
+// sorting_utils
+int			find_greater_nbr(t_stack **stack);
+int			find_smaller_nbr(t_stack **stack);
+int			stack_size_until_element(t_stack **stack, int number);
 
 //initalize
 void		initialize(t_data *data, int argc, char **argv);
@@ -62,11 +68,12 @@ void		operation_reverse_rotate(t_stack **stack);
 void		swap_values(int *a, int *b);
 
 //sorting.c
-t_bool	sorting(t_stack **stack);
-void radix(t_stack **stack_a, t_stack **stack_b, t_data *data);
+t_bool		sorting(t_stack **stack);
+void		radix(t_stack **stack_a, t_stack **stack_b, t_data *data);
 
 //temp_funcs
 static	void	printthe_stacks(t_data *data);
-void	print_stack_elements(t_stack *stack);
+void			print_stack_elements(t_stack *stack);
+
 
 #endif

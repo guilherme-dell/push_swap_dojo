@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 23:33:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/03 01:13:46 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/06 08:39:00 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	swap_values(int *a, int *b)
 	*b ^= *a;
 	*a ^= *b;
 }
-
-
 
 // temp_funcs
 void	print_stack_elements(t_stack *stack)

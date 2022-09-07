@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 01:34:48 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/03 16:21:34 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/06 08:38:50 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ t_bool	sorting(t_stack **stack)
 
 	if (*stack == NULL)
 		return (false);
-
-	int sort_status;
-	sort_status = 0;
 	iterator = *stack;
 	while(iterator->next)
 	{
