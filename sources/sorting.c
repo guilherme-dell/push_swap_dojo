@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 01:34:48 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/06 08:38:50 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/08 16:36:10 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ t_bool	sorting(t_stack **stack)
 	if (*stack == NULL)
 		return (false);
 	iterator = *stack;
-	while(iterator->next)
+	while (iterator->next)
 	{
-		if(iterator->number > iterator->next->number)
+		if (iterator->number > iterator->next->number)
 			return (false);
 		iterator = iterator->next;
 	}
