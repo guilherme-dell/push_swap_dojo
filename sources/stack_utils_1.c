@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 13:30:10 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/02 01:36:26 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/07 01:36:26 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ t_stack	*stack_new(int number)
 
 void	stack_add_front(t_stack **stack, t_stack *new)
 {
+	if (*stack)
+		(*stack)->previous = new;
 	new->previous = NULL;
 	new->next = *stack;
 	*stack = new;
