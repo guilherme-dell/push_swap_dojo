@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/06 08:46:59 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/08 16:34:58 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,9 @@ int	main(int argc, char **argv)
 	equals_numbers(data, argv, data->nbr_of_elements);
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
-	if (sorting(data->stack_a) == true)
-	{
-		memory_clean(data);
-		exit (0);
-	}
-	if (stack_size(data->stack_a) == 3)
-		sort_three(data, data->stack_a);
-	else if (stack_size(data->stack_a) == 5)
-		sort_five(data, data->stack_a);
-	else
-		radix(data->stack_a, data->stack_b, data);
-	//printthe_stacks(data);
+	algorithm_selection(data);
 	memory_clean(data);
 }
-
 
 static void	printthe_stacks(t_data *data)
 {

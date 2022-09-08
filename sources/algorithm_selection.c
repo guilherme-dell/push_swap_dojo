@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   algorithm_selection.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 23:33:35 by coder             #+#    #+#             */
-/*   Updated: 2022/09/08 16:36:39 by gnuncio-         ###   ########.fr       */
+/*   Created: 2022/09/08 14:08:24 by gnuncio-          #+#    #+#             */
+/*   Updated: 2022/09/08 16:36:28 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_values(int *a, int *b);
+void	stack_sorting(t_data *data);
 
-void	swap_values(int *a, int *b)
+void	algorithm_selection(t_data *data)
 {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
+	stack_sorting(data);
+	if (stack_size(data->stack_a) == 3)
+		sort_three(data, data->stack_a);
+	else if (stack_size(data->stack_a) == 5)
+		sort_five(data, data->stack_a);
+	else
+		radix(data);
 }
 
-// temp_funcs
-void	print_stack_elements(t_stack *stack)
+void	stack_sorting(t_data *data)
 {
-	if (stack == NULL)
+	if (sorting(data->stack_a) == true)
 	{
-		ft_printf(" || \n");
-		return ;
+		memory_clean(data);
+		exit (0);
 	}
-	ft_printf(" || ");
-	while (stack)
-	{
-		ft_printf("%d | ", stack->number);
-		stack = stack->next;
-	}
-	ft_printf("\n");
 }

@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   fill_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 22:43:33 by coder             #+#    #+#             */
-/*   Updated: 2022/09/02 01:36:32 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/08 17:00:33 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	fill_stacks(t_data *data, int *normalized_elements);
 
 void	fill_stacks(t_data *data, int *normalized_elements)
 {

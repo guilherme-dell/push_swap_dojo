@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/06 08:43:55 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/08 17:03:32 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,11 @@ void		swap_values(int *a, int *b);
 
 //sorting.c
 t_bool		sorting(t_stack **stack);
-void		radix(t_stack **stack_a, t_stack **stack_b, t_data *data);
+void		radix(t_data *data);
+
+//algorithm_selection.c
+void	algorithm_selection(t_data *data);
+void	stack_sorting(t_data *data);
 
 //temp_funcs
 static	void	printthe_stacks(t_data *data);
