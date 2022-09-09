@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 20:42:31 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/09 20:50:45 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,7 @@ int	main(int argc, char **argv)
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
 	printthe_stacks(data);
-	run_push(data, PB);
-	run_push(data, PB);
-	run_push(data, PB);
-	run_push(data, PB);
-	run_push(data, PB);
-	run_push(data, PB);
-	run_push(data, PB);
-	sort_seven_stack_b(data, data->stack_b);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_push(data, PA);
-	//algorithm_selection(data);
+	algorithm_selection(data);
 	printthe_stacks(data);
 	memory_clean(data);
 }

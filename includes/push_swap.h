@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 20:41:43 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/09 22:24:06 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,6 @@
 void		sort_three(t_data *data, t_stack **a);
 void		sort_five(t_data *data, t_stack **a);
 void		sort_seven(t_data *data, t_stack **a);
-
-//small_sorting_b
-void	sort_five_stack_b(t_data *data, t_stack **a);
-void	sort_three_stack_b(t_data *data, t_stack **a);
-void	sort_seven_stack_b(t_data *data, t_stack **a);
 
 // sorting_utils
 int			find_greater_nbr(t_stack **stack);
