@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/08 17:03:32 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:51:59 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 //sorting
 void		sort_three(t_data *data, t_stack **a);
 void		sort_five(t_data *data, t_stack **a);
+void		sort_seven(t_data *data, t_stack **a);
 
 // sorting_utils
 int			find_greater_nbr(t_stack **stack);
 int			find_smaller_nbr(t_stack **stack);
 int			stack_size_until_element(t_stack **stack, int number);
+void	put_element_on_top(t_data *data, t_stack **a, int element);
 
 //initalize
 void		initialize(t_data *data, int argc, char **argv);

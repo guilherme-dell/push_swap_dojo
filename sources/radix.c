@@ -6,11 +6,13 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:26:11 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/08 16:23:03 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:53:08 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	printthe_stacks(t_data *data);
 
 void	radix(t_data *data)
 {

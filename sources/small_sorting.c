@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:42:40 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/06 08:47:30 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:48:42 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,25 @@ void	sort_five(t_data *data, t_stack **a)
 	}
 	run_push(data, PB);
 	sort_three(data, a);
+	run_push(data, PA);
+	run_push(data, PA);
+	run_rotate(data, RA);
+}
+
+void	sort_seven(t_data *data, t_stack **a)
+{
+	int	greater;
+	int	smaller;
+
+	if (sorting(a) == true)
+		return ;
+	greater = find_greater_nbr(a);
+	smaller = find_smaller_nbr(a);
+	put_element_on_top(data, a, greater);
+	run_push(data, PB);
+	put_element_on_top(data, a, smaller);
+	run_push(data, PB);
+	sort_five(data, a);
 	run_push(data, PA);
 	run_push(data, PA);
 	run_rotate(data, RA);

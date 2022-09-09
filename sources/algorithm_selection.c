@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:08:24 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/08 16:36:28 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:53:15 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	algorithm_selection(t_data *data)
 		sort_three(data, data->stack_a);
 	else if (stack_size(data->stack_a) == 5)
 		sort_five(data, data->stack_a);
+	else if (stack_size(data->stack_a) == 7)
+		sort_seven(data, data->stack_a);
 	else
 		radix(data);
 }

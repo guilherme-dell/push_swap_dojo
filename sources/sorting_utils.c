@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:25:16 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/06 08:39:29 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:51:32 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,21 @@ int	stack_size_until_element(t_stack **stack, int number)
 		node++;
 	}
 	return (node);
+}
+
+void	put_element_on_top(t_data *data, t_stack **a, int element)
+{
+	int stack_length;
+
+	stack_length = stack_size(a);
+	if (stack_size_until_element(a, element) <= (stack_length / 2))
+	{
+		while ((*a)->number != element)
+			run_rotate(data, RA);
+	}
+	else
+	{
+		while ((*a)->number != element)
+			run_reverse_rotate(data, RRA);
+	}
 }
