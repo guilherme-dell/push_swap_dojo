@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:27:41 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 20:50:45 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/10 00:20:28 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ int	main(int argc, char **argv)
 	equals_numbers(data, argv, data->nbr_of_elements);
 	normalized_elements = normalization(argv, data->nbr_of_elements);
 	fill_stacks(data, normalized_elements);
-	printthe_stacks(data);
 	algorithm_selection(data);
-	printthe_stacks(data);
 	memory_clean(data);
 }
 

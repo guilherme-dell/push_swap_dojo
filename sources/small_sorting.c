@@ -6,7 +6,7 @@
 /*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:42:40 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 19:48:42 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/10 00:11:10 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,26 +55,18 @@ void	sort_five(t_data *data, t_stack **a)
 	greater = find_greater_nbr(a);
 	smaller = find_smaller_nbr(a);
 	if (stack_size_until_element(a, greater) < 3)
-	{
 		while ((*a)->number != greater)
 			run_rotate(data, RA);
-	}
 	else
-	{
 		while ((*a)->number != greater)
 			run_reverse_rotate(data, RRA);
-	}
 	run_push(data, PB);
 	if (stack_size_until_element(a, smaller) < 3)
-	{
 		while ((*a)->number != smaller)
 			run_rotate(data, RA);
-	}
 	else
-	{
 		while ((*a)->number != smaller)
 			run_reverse_rotate(data, RRA);
-	}
 	run_push(data, PB);
 	sort_three(data, a);
 	run_push(data, PA);

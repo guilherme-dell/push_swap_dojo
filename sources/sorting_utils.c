@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:25:16 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 20:42:15 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/10 00:01:35 by gnuncio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	stack_size_until_element(t_stack **stack, int number)
 
 void	put_element_on_top(t_data *data, t_stack **a, int element)
 {
-	int stack_length;
+	int	stack_length;
 
 	stack_length = stack_size(a);
 	if (stack_size_until_element(a, element) <= (stack_length / 2))
@@ -91,7 +91,7 @@ void	put_element_on_top(t_data *data, t_stack **a, int element)
 
 void	put_element_on_top_b(t_data *data, t_stack **a, int element)
 {
-	int stack_length;
+	int	stack_length;
 
 	stack_length = stack_size(a);
 	if (stack_size_until_element(a, element) <= (stack_length / 2))
