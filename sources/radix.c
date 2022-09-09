@@ -3,16 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:26:11 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/09 20:03:07 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/09 20:35:06 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	printthe_stacks(t_data *data);
+
+static void	printthe_stacks(t_data *data)
+{
+	ft_printf("\nSTACK A");
+	print_stack_elements(*data->stack_a);
+	ft_printf("\nSTACK B");
+	print_stack_elements(*data->stack_b);
+	ft_printf("\n");
+}
 
 void	radix(t_data *data)
 {
@@ -32,8 +41,10 @@ void	radix(t_data *data)
 			else{
 				run_push(data, PB);
 				counter_push_b++;
-				if (counter_push_b == 7){
-					sort_seven(data, data->stack_b);
+			if (counter_push_b == 7){
+					printthe_stacks(data);
+					sort_seven_stack_b(data, data->stack_b);
+					printthe_stacks(data);
 					counter_push_b = 0;
 				}
 			}
@@ -45,22 +56,3 @@ void	radix(t_data *data)
 	}
 }
 
-
-void	sort_seven_stack_b(t_data *data, t_stack **a)
-{
-	int	greater;
-	int	smaller;
-
-	if (sorting(a) == true)
-		return ;
-	greater = find_greater_nbr(a);
-	smaller = find_smaller_nbr(a);
-	put_element_on_top(data, a, greater);
-	run_push(data, PB);
-	put_element_on_top(data, a, smaller);
-	run_push(data, PB);
-	sort_five(data, a);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_rotate(data, RA);
-}
