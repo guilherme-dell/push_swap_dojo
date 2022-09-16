@@ -6,17 +6,17 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 22:03:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/16 23:46:00 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	initialize(t_data *data, int argc, char **argv);
-void	init_data(t_data *data, int argc);
-void	ft_isinteger(t_data *data, int argc, char **argv);
-int		find_last_leading_zero(char *number);
-t_bool	is_outside_integers_range(char *number);
+void			initialize(t_data *data, int argc, char **argv);
+void			init_data(t_data *data, int argc);
+void			ft_isinteger(t_data *data, int argc, char **argv);
+static int		find_last_leading_zero(char *number);
+static t_bool	is_outside_integers_range(char *number);
 
 void	initialize(t_data *data, int argc, char **argv)
 {
@@ -55,7 +55,7 @@ void	ft_isinteger(t_data *data, int argc, char **argv)
 	}
 }
 
-int	find_last_leading_zero(char *number)
+static int	find_last_leading_zero(char *number)
 {
 	int	i;
 
@@ -67,7 +67,7 @@ int	find_last_leading_zero(char *number)
 	return (i);
 }
 
-t_bool	is_outside_integers_range(char *number)
+static t_bool	is_outside_integers_range(char *number)
 {
 	int	i;
 

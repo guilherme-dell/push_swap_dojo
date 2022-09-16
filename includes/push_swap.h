@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/16 23:38:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/16 23:46:56 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void		put_element_on_top_b(t_data *data, t_stack **a, int element);
 void		initialize(t_data *data, int argc, char **argv);
 void		init_data(t_data *data, int argc);
 void		ft_isinteger(t_data *data, int argc, char **argv);
-int			find_last_leading_zero(char *number);
-t_bool		is_outside_integers_range(char *number);
 
 //memory_clean
 void		memory_clean(t_data *data);
