@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:26:11 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/16 21:49:09 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 00:56:12 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ void	radix(t_data *data)
 	int	count;
 
 	shift = 0;
-	while (!sorting(data->stack_a))
+	while (is_sorted(data->stack_a) == false)
 	{
 		count = 0;
 		while (count < data->nbr_of_elements)
 		{
 			if (((*data->stack_a)->number >> shift) & 1)
-				run_rotate(data, RA);
+				ra(data->stack_a);
 			else
-				run_push(data, PB);
+				pb(data->stack_a, data->stack_b);
 			count++;
 		}
 		while ((*data->stack_b))
-			run_push(data, PA);
+			pa(data->stack_a, data->stack_b);
 		shift++;
 	}
 }

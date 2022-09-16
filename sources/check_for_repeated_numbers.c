@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   equals_numbers.c                                   :+:      :+:    :+:   */
+/*   check_for_repeated_numbers.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 00:06:03 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/08/28 02:57:55 by acesar-l         ###   ########.fr       */
+/*   Updated: 2022/09/17 01:20:51 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	equals_numbers(t_data *data, char **values, int nbr_of_elements)
+void	check_for_repeated_numbers(t_data *data, char **argv)
 {
 	int	i;
 	int	j;
 
 	i = 1;
-	while (i <= nbr_of_elements)
+	while (i <= data->nbr_of_elements)
 	{
-		j = i;
-		while (j < nbr_of_elements)
+		j = i + 1;
+		while (j < data->nbr_of_elements)
 		{
-			if (ft_atoi(values[i]) == ft_atoi(values[j + 1]))
+			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				error(data, "Repeated numbers are not allowed.");
 			j++;
 		}

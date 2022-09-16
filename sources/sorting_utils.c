@@ -3,18 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:25:16 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/16 23:38:44 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 01:16:44 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_greater_nbr(t_stack **stack);
-int	find_smaller_nbr(t_stack **stack);
-int	stack_size_until_element(t_stack **stack, int number);
+t_bool	is_sorted(t_stack **stack);
+int		find_greatest_nbr(t_stack **stack);
+int		find_smallest_nbr(t_stack **stack);
+int		stack_size_until_element(t_stack **stack, int number);
+
+t_bool	is_sorted(t_stack **stack)
+{
+	t_stack	*iterator;
+
+	if (*stack == NULL)
+		return (false);
+	iterator = *stack;
+	while (iterator->next)
+	{
+		if (iterator->number > iterator->next->number)
+			return (false);
+		iterator = iterator->next;
+	}
+	return (true);
+}
 
 int	find_greatest_nbr(t_stack **stack)
 {
@@ -70,38 +87,4 @@ int	stack_size_until_element(t_stack **stack, int number)
 		node++;
 	}
 	return (node);
-}
-
-void	put_element_on_top(t_data *data, t_stack **a, int element)
-{
-	int	stack_length;
-
-	stack_length = stack_size(a);
-	if (stack_size_until_element(a, element) <= (stack_length / 2))
-	{
-		while ((*a)->number != element)
-			run_rotate(data, RA);
-	}
-	else
-	{
-		while ((*a)->number != element)
-			run_reverse_rotate(data, RRA);
-	}
-}
-
-void	put_element_on_top_b(t_data *data, t_stack **a, int element)
-{
-	int	stack_length;
-
-	stack_length = stack_size(a);
-	if (stack_size_until_element(a, element) <= (stack_length / 2))
-	{
-		while ((*a)->number != element)
-			run_rotate(data, RB);
-	}
-	else
-	{
-		while ((*a)->number != element)
-			run_reverse_rotate(data, RRB);
-	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:42:40 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/16 23:37:55 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 01:02:45 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ void	sort_three_elements(t_data *data)
 	smallest = find_smallest_nbr(data->stack_a);
 	if (smallest == (*data->stack_a)->number)
 	{
-		run_reverse_rotate(data, RRA);
-		run_swap(data, SA);
+		rra(data->stack_a);
+		sa(data->stack_a);
 	}
 	else if (smallest == (*data->stack_a)->next->next->number)
 	{
 		if (greatest == (*data->stack_a)->number)
 		{
-			run_rotate(data, RA);
-			run_swap(data, SA);
+			ra(data->stack_a);
+			sa(data->stack_a);
 		}
 		else
-			run_reverse_rotate(data, RRA);
+			rra(data->stack_a);
 	}
 	else if (greatest == (*data->stack_a)->next->next->number)
-		run_swap(data, SA);
+		sa(data->stack_a);
 	else
-		run_rotate(data, RA);
+		ra(data->stack_a);
 }
 
 void	sort_five_elements(t_data *data)
@@ -52,20 +52,20 @@ void	sort_five_elements(t_data *data)
 	smallest = find_smallest_nbr(data->stack_a);
 	if (stack_size_until_element(data->stack_a, greatest) < 3)
 		while ((*data->stack_a)->number != greatest)
-			run_rotate(data, RA);
+			ra(data->stack_a);
 	else
 		while ((*data->stack_a)->number != greatest)
-			run_reverse_rotate(data, RRA);
-	run_push(data, PB);
+			rra(data->stack_a);
+	pb(data->stack_a, data->stack_b);
 	if (stack_size_until_element(data->stack_a, smallest) < 3)
 		while ((*data->stack_a)->number != smallest)
-			run_rotate(data, RA);
+			ra(data->stack_a);
 	else
 		while ((*data->stack_a)->number != smallest)
-			run_reverse_rotate(data, RRA);
-	run_push(data, PB);
+			rra(data->stack_a);
+	pb(data->stack_a, data->stack_b);
 	sort_three_elements(data);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_rotate(data, RA);
+	pa(data->stack_a, data->stack_b);
+	pa(data->stack_a, data->stack_b);
+	ra(data->stack_a);
 }

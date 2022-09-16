@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
+#    By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 16:48:56 by acesar-l          #+#    #+#              #
-#    Updated: 2022/09/16 23:32:21 by coder            ###   ########.fr        #
+#    Updated: 2022/09/17 01:28:19 by acesar-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,22 @@ REMOVE 		= rm -f
 
 INCLUDES = -I ./includes/
 
-SRCS 		= $(SRCS_PATH)/*.c
+SRCS 		=	$(SRCS_PATH)/push_swap.c 				\
+			$(SRCS_PATH)/initialize.c 					\
+			$(SRCS_PATH)/check_for_repeated_numbers.c 	\
+			$(SRCS_PATH)/normalization.c 				\
+			$(SRCS_PATH)/fill_stacks.c 					\
+			$(SRCS_PATH)/algorithm_selection.c 			\
+			$(SRCS_PATH)/radix.c 						\
+			$(SRCS_PATH)/small_sorting.c 				\
+			$(SRCS_PATH)/sorting_utils.c 				\
+			$(SRCS_PATH)/stack_utils_1.c 				\
+			$(SRCS_PATH)/stack_utils_2.c 				\
+			$(SRCS_PATH)/operations/push.c 				\
+			$(SRCS_PATH)/operations/swap.c 				\
+			$(SRCS_PATH)/operations/rotate.c 			\
+			$(SRCS_PATH)/operations/reverse_rotate.c 	\
+			$(SRCS_PATH)/memory_clean.c
 
 all:		$(NAME)
 
