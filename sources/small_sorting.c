@@ -3,35 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   small_sorting.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:42:40 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/10 00:11:10 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/16 23:37:55 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_five(t_data *data, t_stack **a);
-void	sort_three(t_data *data, t_stack **a);
+void	sort_five_elements(t_data *data);
+void	sort_three_elements(t_data *data);
 
-void	sort_three(t_data *data, t_stack **a)
+void	sort_three_elements(t_data *data)
 {
-	int	greater;
-	int	smaller;
+	int	greatest;
+	int	smallest;
 
-	if (sorting(a) == true)
-		return ;
-	greater = find_greater_nbr(a);
-	smaller = find_smaller_nbr(a);
-	if (smaller == (*a)->number)
+	greatest = find_greatest_nbr(data->stack_a);
+	smallest = find_smallest_nbr(data->stack_a);
+	if (smallest == (*data->stack_a)->number)
 	{
 		run_reverse_rotate(data, RRA);
 		run_swap(data, SA);
 	}
-	else if (smaller == (*a)->next->next->number)
+	else if (smallest == (*data->stack_a)->next->next->number)
 	{
-		if (greater == (*a)->number)
+		if (greatest == (*data->stack_a)->number)
 		{
 			run_rotate(data, RA);
 			run_swap(data, SA);
@@ -39,55 +37,34 @@ void	sort_three(t_data *data, t_stack **a)
 		else
 			run_reverse_rotate(data, RRA);
 	}
-	else if (greater == (*a)->next->next->number)
+	else if (greatest == (*data->stack_a)->next->next->number)
 		run_swap(data, SA);
 	else
 		run_rotate(data, RA);
 }
 
-void	sort_five(t_data *data, t_stack **a)
+void	sort_five_elements(t_data *data)
 {
-	int	greater;
-	int	smaller;
+	int	greatest;
+	int	smallest;
 
-	if (sorting(a) == true)
-		return ;
-	greater = find_greater_nbr(a);
-	smaller = find_smaller_nbr(a);
-	if (stack_size_until_element(a, greater) < 3)
-		while ((*a)->number != greater)
+	greatest = find_greatest_nbr(data->stack_a);
+	smallest = find_smallest_nbr(data->stack_a);
+	if (stack_size_until_element(data->stack_a, greatest) < 3)
+		while ((*data->stack_a)->number != greatest)
 			run_rotate(data, RA);
 	else
-		while ((*a)->number != greater)
+		while ((*data->stack_a)->number != greatest)
 			run_reverse_rotate(data, RRA);
 	run_push(data, PB);
-	if (stack_size_until_element(a, smaller) < 3)
-		while ((*a)->number != smaller)
+	if (stack_size_until_element(data->stack_a, smallest) < 3)
+		while ((*data->stack_a)->number != smallest)
 			run_rotate(data, RA);
 	else
-		while ((*a)->number != smaller)
+		while ((*data->stack_a)->number != smallest)
 			run_reverse_rotate(data, RRA);
 	run_push(data, PB);
-	sort_three(data, a);
-	run_push(data, PA);
-	run_push(data, PA);
-	run_rotate(data, RA);
-}
-
-void	sort_seven(t_data *data, t_stack **a)
-{
-	int	greater;
-	int	smaller;
-
-	if (sorting(a) == true)
-		return ;
-	greater = find_greater_nbr(a);
-	smaller = find_smaller_nbr(a);
-	put_element_on_top(data, a, greater);
-	run_push(data, PB);
-	put_element_on_top(data, a, smaller);
-	run_push(data, PB);
-	sort_five(data, a);
+	sort_three_elements(data);
 	run_push(data, PA);
 	run_push(data, PA);
 	run_rotate(data, RA);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 08:25:16 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/10 00:01:35 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/16 23:38:44 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,43 +16,43 @@ int	find_greater_nbr(t_stack **stack);
 int	find_smaller_nbr(t_stack **stack);
 int	stack_size_until_element(t_stack **stack, int number);
 
-int	find_greater_nbr(t_stack **stack)
+int	find_greatest_nbr(t_stack **stack)
 {
-	int		greater;
+	int		greatest;
 	t_stack	*ptr_i;
 
-	greater = 0;
+	greatest = 0;
 	ptr_i = *stack;
 	while (ptr_i->next)
 	{
-		if (ptr_i->number > ptr_i->next->number && ptr_i->number > greater)
-			greater = ptr_i->number;
+		if (ptr_i->number > ptr_i->next->number && ptr_i->number > greatest)
+			greatest = ptr_i->number;
 		ptr_i = ptr_i->next;
 	}
-	if (ptr_i->number > greater)
-		greater = ptr_i->number;
-	return (greater);
+	if (ptr_i->number > greatest)
+		greatest = ptr_i->number;
+	return (greatest);
 }
 
-int	find_smaller_nbr(t_stack **stack)
+int	find_smallest_nbr(t_stack **stack)
 {
-	int		smaller;
+	int		smallest;
 	t_stack	*ptr_i;
 
 	ptr_i = *stack;
 	if (ptr_i->number < ptr_i->next->number)
-		smaller = ptr_i->number;
+		smallest = ptr_i->number;
 	else
-		smaller = ptr_i->next->number;
+		smallest = ptr_i->next->number;
 	while (ptr_i->next)
 	{
-		if (ptr_i->number < ptr_i->next->number && ptr_i->number < smaller)
-			smaller = ptr_i->number;
+		if (ptr_i->number < ptr_i->next->number && ptr_i->number < smallest)
+			smallest = ptr_i->number;
 		ptr_i = ptr_i->next;
 	}
-	if (ptr_i->number < smaller)
-		smaller = ptr_i->number;
-	return (smaller);
+	if (ptr_i->number < smallest)
+		smallest = ptr_i->number;
+	return (smallest);
 }
 
 int	stack_size_until_element(t_stack **stack, int number)

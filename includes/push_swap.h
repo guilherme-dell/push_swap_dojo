@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:43 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/09 22:24:06 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/16 23:38:59 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@
 # include "defines.h"
 
 //sorting
-void		sort_three(t_data *data, t_stack **a);
-void		sort_five(t_data *data, t_stack **a);
-void		sort_seven(t_data *data, t_stack **a);
+void		sort_three_elements(t_data *data);
+void		sort_five_elements(t_data *data);
 
 // sorting_utils
-int			find_greater_nbr(t_stack **stack);
-int			find_smaller_nbr(t_stack **stack);
+int			find_greatest_nbr(t_stack **stack);
+int			find_smallest_nbr(t_stack **stack);
 int			stack_size_until_element(t_stack **stack, int number);
 void		put_element_on_top(t_data *data, t_stack **a, int element);
 void		put_element_on_top_b(t_data *data, t_stack **a, int element);
@@ -75,12 +74,7 @@ t_bool		sorting(t_stack **stack);
 void		radix(t_data *data);
 
 //algorithm_selection.c
-void	algorithm_selection(t_data *data);
-void	stack_sorting(t_data *data);
-
-//temp_funcs
-static	void	printthe_stacks(t_data *data);
-void			print_stack_elements(t_stack *stack);
-
+void		algorithm_selection(t_data *data);
+void		stack_sorting(t_data *data);
 
 #endif

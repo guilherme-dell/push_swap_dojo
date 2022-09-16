@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_selection.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gnuncio- <gnuncio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:08:24 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/09 19:53:15 by gnuncio-         ###   ########.fr       */
+/*   Updated: 2022/09/16 22:09:34 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ void	algorithm_selection(t_data *data)
 {
 	stack_sorting(data);
 	if (stack_size(data->stack_a) == 3)
-		sort_three(data, data->stack_a);
+		sort_three_elements(data);
 	else if (stack_size(data->stack_a) == 5)
-		sort_five(data, data->stack_a);
-	else if (stack_size(data->stack_a) == 7)
-		sort_seven(data, data->stack_a);
+		sort_five_elements(data);
 	else
 		radix(data);
 }
