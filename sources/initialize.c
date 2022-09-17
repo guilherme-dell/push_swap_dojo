@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:41:30 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/16 23:46:00 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 00:12:37 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	initialize(t_data *data, int argc, char **argv)
 void	init_data(t_data *data, int argc)
 {
 	data->nbr_of_elements = argc - 1;
-	data->stack_allocated = false;
+	data->is_stack_allocated = false;
 }
 
 void	ft_isinteger(t_data *data, int argc, char **argv)

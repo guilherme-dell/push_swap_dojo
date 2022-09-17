@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:28:38 by acesar-l          #+#    #+#             */
-/*   Updated: 2022/09/01 23:47:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/17 00:12:17 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_stack
 typedef struct s_data
 {
 	int			nbr_of_elements;
-	t_bool		stack_allocated;
+	t_bool		is_stack_allocated;
 	t_stack		**stack_a;
 	t_stack		**stack_b;
 }	t_data;
