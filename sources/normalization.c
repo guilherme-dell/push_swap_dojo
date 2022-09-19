@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalization.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 18:24:17 by gnuncio-          #+#    #+#             */
-/*   Updated: 2022/09/17 00:00:58 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/19 16:41:53 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	*normalization(char **argv, int nbr_of_elements)
 
 	i = 1;
 	normalized = malloc((sizeof(int) * (nbr_of_elements)));
-	while (i < nbr_of_elements)
+	while (i <= nbr_of_elements)
 	{
 		j = 1;
 		index = 0;

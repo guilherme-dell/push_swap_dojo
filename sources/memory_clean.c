@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   memory_clean.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 01:34:58 by coder             #+#    #+#             */
-/*   Updated: 2022/09/17 00:11:51 by coder            ###   ########.fr       */
+/*   Updated: 2022/09/19 16:37:36 by acesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,18 @@ void	memory_clean(t_data *data)
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
+	exit(EXIT_FAILURE);
 }
 
 void	error(t_data *data, char *message)
 {
 	ft_printf(RED"Error\n"RESET);
 	ft_printf(GREY"%s\n"RESET, message);
-	free(data);
 	if (data->is_stack_allocated == true)
 	{
 		clear_stack(data->stack_a);
 		clear_stack(data->stack_b);
 	}
+	free(data);
 	exit(EXIT_FAILURE);
 }
