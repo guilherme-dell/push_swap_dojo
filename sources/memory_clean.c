@@ -20,7 +20,7 @@ void	memory_clean(t_data *data)
 	clear_stack(data->stack_a);
 	clear_stack(data->stack_b);
 	free(data);
-	exit(EXIT_FAILURE);
+	exit(0);
 }
 
 void	error(t_data *data, char *message)
