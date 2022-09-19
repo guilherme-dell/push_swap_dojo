@@ -21,7 +21,7 @@ void	check_for_repeated_numbers(t_data *data, char **argv)
 	while (i <= data->nbr_of_elements)
 	{
 		j = i + 1;
-		while (j < data->nbr_of_elements)
+		while (j <= data->nbr_of_elements)
 		{
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				error(data, "Repeated numbers are not allowed.");
