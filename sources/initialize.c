@@ -21,6 +21,8 @@ static t_bool	is_outside_integers_range(char *number);
 void	initialize(t_data *data, int argc, char **argv)
 {
 	init_data(data, argc);
+	if (argc < 3)
+		exit(1);
 	ft_isinteger(data, argc, argv);
 }
 
